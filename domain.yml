@@ -1,0 +1,61 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- goodbye
+- affirm
+- deny
+- mood_great
+- mood_unhappy
+- bot_challenge
+- want_to_know
+- show_this_category
+- show_this_id
+- more_info
+entities:
+- tend
+- tender
+slots:
+  tend:
+    type: text
+  tender:
+    type: text
+responses:
+  utter_greet:
+  - text: "Hey! Welcome to the ONGC India \n My name is Bharti,I am here to help with\
+      \ information on Tenders"
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: "OK Bye!! I Hope your queries were Addressed\n You may Visit : https://tenders.ongc.co.in/\
+      \ for more information"
+  utter_iamabot:
+  - text: I am a bot, powered by ONGC India.
+  utter_ask_category:
+  - text: 'Which type of tender would you like to know about: 1.e-gas 2. Procurement
+      3.Corrigendum (its case sensitive)'
+  utter_ask_id:
+  - text: Do you have Tender ID / Tender Number?? (its case sensitive)
+  utter_tell_id:
+  - text: Ok tell me ID / Number??
+  utter_more_info:
+  - text: 'You may Visit : https://tenders.ongc.co.in/ for more information'
+actions:
+- action_show_by_category
+- action_show_by_id
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+- utter_ask_category
+- utter_ask_id
+- utter_tell_id
+- utter_more_info
